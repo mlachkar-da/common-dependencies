@@ -36,7 +36,7 @@ jobs:
 
       # Step 5: Check if the dependencies file was changed
       - name: Check for changes
-        run: git diff --exit-code || echo "Dependencies file has changed"
+        run: git diff --exit-code
 
       # Step 6: Commit and push changes if necessary
       - name: Commit and push changes
