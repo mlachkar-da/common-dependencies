@@ -13,7 +13,7 @@ lazy val writeDependencies =
   taskKey[Unit]("Writes the dependencies to a JSON file")
 
 writeDependencies := {
-  val outputFile = baseDirectory.value / "dependencies-Meriam.json"
+  val outputFile = baseDirectory.value / "common-dependencies.json"
   val deps = libraryDependencies.value.map(toDependency)
   val json = Dependency.asJson(deps)
   IO.write(outputFile, json)
