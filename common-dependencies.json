@@ -52,7 +52,7 @@
   {
     "org" : "org.scalaz",
     "artifact" : "scalaz-scalacheck-binding",
-    "version" : "7.2.33-scalacheck-1.15"
+    "version" : "7.2.36-scalacheck-1.15"
   },
   {
     "org" : "com.github.ben-manes.caffeine",
