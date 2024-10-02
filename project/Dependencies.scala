@@ -1,5 +1,4 @@
 import sbt.{io as _, *}
-import cats.syntax.either.*
 
 
 object Dependencies {
