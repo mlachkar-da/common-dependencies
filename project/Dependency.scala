@@ -10,6 +10,7 @@ case class Dependency(
 
 object Dependency {
   implicit val depEncoder: Encoder[Dependency] = deriveEncoder[Dependency]
+  val filter = Set("org.scala-lang")
 
   def toDependency(m: ModuleID): Dependency = Dependency(
     org = m.organization,
