@@ -1,38 +1,8 @@
 [
   {
-    "org" : "org.scala-lang",
-    "artifact" : "scala-library",
-    "version" : "2.13.15"
-  },
-  {
-    "org" : "commons-codec",
-    "artifact" : "commons-codec",
-    "version" : "1.11"
-  },
-  {
-    "org" : "commons-io",
-    "artifact" : "commons-io",
-    "version" : "2.11.0"
-  },
-  {
-    "org" : "com.google.api.grpc",
-    "artifact" : "proto-google-common-protos",
-    "version" : "2.22.0"
-  },
-  {
-    "org" : "com.google.protobuf",
-    "artifact" : "protobuf-java",
-    "version" : "3.24.0"
-  },
-  {
-    "org" : "com.fasterxml.jackson.core",
-    "artifact" : "jackson-core",
-    "version" : "2.14.3"
-  },
-  {
-    "org" : "com.auth0",
-    "artifact" : "java-jwt",
-    "version" : "4.2.1"
+    "org" : "io.opentelemetry",
+    "artifact" : "opentelemetry-exporter-common",
+    "version" : "1.36.0"
   },
   {
     "org" : "com.auth0",
@@ -40,24 +10,14 @@
     "version" : "0.21.2"
   },
   {
-    "org" : "com.zaxxer",
-    "artifact" : "HikariCP",
-    "version" : "3.2.0"
-  },
-  {
-    "org" : "com.google.guava",
-    "artifact" : "guava",
-    "version" : "31.1-jre"
-  },
-  {
-    "org" : "org.scalaz",
-    "artifact" : "scalaz-scalacheck-binding",
-    "version" : "7.2.33-scalacheck-1.15"
-  },
-  {
     "org" : "com.github.ben-manes.caffeine",
     "artifact" : "caffeine",
     "version" : "3.1.2"
+  },
+  {
+    "org" : "io.opentelemetry",
+    "artifact" : "opentelemetry-sdk-testing",
+    "version" : "1.36.0"
   },
   {
     "org" : "org.playframework.anorm",
@@ -65,9 +25,59 @@
     "version" : "2.7.0"
   },
   {
-    "org" : "com.thesamet.scalapb",
-    "artifact" : "scalapb-json4s",
-    "version" : "0.11.1"
+    "org" : "io.opentelemetry",
+    "artifact" : "opentelemetry-sdk-extension-autoconfigure",
+    "version" : "1.36.0"
+  },
+  {
+    "org" : "com.zaxxer",
+    "artifact" : "HikariCP",
+    "version" : "3.2.0"
+  },
+  {
+    "org" : "org.scalaz",
+    "artifact" : "scalaz-scalacheck-binding",
+    "version" : "7.2.33-scalacheck-1.15"
+  },
+  {
+    "org" : "io.opentelemetry.instrumentation",
+    "artifact" : "opentelemetry-runtime-telemetry-java8",
+    "version" : "2.1.0-alpha"
+  },
+  {
+    "org" : "com.fasterxml.jackson.core",
+    "artifact" : "jackson-core",
+    "version" : "2.14.3"
+  },
+  {
+    "org" : "io.opentelemetry.instrumentation",
+    "artifact" : "opentelemetry-grpc-1.6",
+    "version" : "2.1.0-alpha"
+  },
+  {
+    "org" : "io.opentelemetry",
+    "artifact" : "opentelemetry-exporter-prometheus",
+    "version" : "1.36.0-alpha"
+  },
+  {
+    "org" : "commons-codec",
+    "artifact" : "commons-codec",
+    "version" : "1.11"
+  },
+  {
+    "org" : "com.google.api.grpc",
+    "artifact" : "proto-google-common-protos",
+    "version" : "2.22.0"
+  },
+  {
+    "org" : "commons-io",
+    "artifact" : "commons-io",
+    "version" : "2.11.0"
+  },
+  {
+    "org" : "io.opentelemetry",
+    "artifact" : "opentelemetry-proto",
+    "version" : "1.7.1-alpha"
   },
   {
     "org" : "io.opentelemetry",
@@ -81,11 +91,6 @@
   },
   {
     "org" : "io.opentelemetry",
-    "artifact" : "opentelemetry-sdk-testing",
-    "version" : "1.36.0"
-  },
-  {
-    "org" : "io.opentelemetry",
     "artifact" : "opentelemetry-exporter-zipkin",
     "version" : "1.36.0"
   },
@@ -95,33 +100,23 @@
     "version" : "1.36.0"
   },
   {
-    "org" : "io.opentelemetry",
-    "artifact" : "opentelemetry-exporter-common",
-    "version" : "1.36.0"
+    "org" : "com.thesamet.scalapb",
+    "artifact" : "scalapb-json4s",
+    "version" : "0.11.1"
   },
   {
-    "org" : "io.opentelemetry",
-    "artifact" : "opentelemetry-sdk-extension-autoconfigure",
-    "version" : "1.36.0"
+    "org" : "com.google.protobuf",
+    "artifact" : "protobuf-java",
+    "version" : "3.24.0"
   },
   {
-    "org" : "io.opentelemetry",
-    "artifact" : "opentelemetry-exporter-prometheus",
-    "version" : "1.36.0-alpha"
+    "org" : "com.google.guava",
+    "artifact" : "guava",
+    "version" : "31.1-jre"
   },
   {
-    "org" : "io.opentelemetry.instrumentation",
-    "artifact" : "opentelemetry-grpc-1.6",
-    "version" : "2.1.0-alpha"
-  },
-  {
-    "org" : "io.opentelemetry.instrumentation",
-    "artifact" : "opentelemetry-runtime-telemetry-java8",
-    "version" : "2.1.0-alpha"
-  },
-  {
-    "org" : "io.opentelemetry",
-    "artifact" : "opentelemetry-proto",
-    "version" : "1.7.1-alpha"
+    "org" : "com.auth0",
+    "artifact" : "java-jwt",
+    "version" : "4.2.1"
   }
 ]
