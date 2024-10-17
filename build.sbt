@@ -2,7 +2,7 @@ import Dependencies._
 import Dependency._
 
 ThisBuild / scalaVersion := "2.13.15"
-
+Global / onChangedBuildSource := ReloadOnSourceChanges
 lazy val root = (project in file("."))
   .settings(
     name := "common-dependencies",
@@ -15,9 +15,10 @@ lazy val writeDependencies =
 writeDependencies := {
   val outputFile = baseDirectory.value / "common-dependencies.json"
   val deps = libraryDependencies.value
-    .sortBy(module => (module.organization, module.name, module.revision))
     .map(toDependency)
-  val json = Dependency.asJson(deps)
+
+  val toWrite = deps.sortBy(dep => (dep.org, dep.artifact, dep.version)).toSet
+  val json = Dependency.asJson(toWrite.toSeq)
   IO.write(outputFile, json)
 }
 
@@ -30,15 +31,19 @@ writeDependencyTree := {
   val outputFile = baseDirectory.value / "all-common-dependencies.json"
   val report = update.value
   val deps = report.configurations
-    .flatMap { config =>
+    .find(_.configuration.name == Compile.name)
+    .map { config =>
       config.modules.map(_.module)
     }
-    .toSet
-    .toSeq
-    .sortBy((module: ModuleID) =>
-      (module.organization, module.name, module.revision)
-    )
+    .map(_.toSet)
+    .getOrElse(Nil)
 
-  val json = Dependency.asJson(deps.map(toDependency))
+  val toWrite = deps
+    .map(toDependency)
+    .toSeq
+    .sortBy(dep => (dep.org, dep.artifact, dep.version))
+    .toSet
+
+  val json = Dependency.asJson(toWrite.toSeq)
   IO.write(outputFile, json)
 }
