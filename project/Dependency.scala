@@ -5,7 +5,8 @@ import io.circe.*, io.circe.generic.semiauto.*
 case class Dependency(
     org: String,
     artifact: String,
-    version: String
+    version: String,
+    crossVersion: String
 )
 
 object Dependency {
@@ -15,7 +16,8 @@ object Dependency {
   def toDependency(m: ModuleID): Dependency = Dependency(
     org = m.organization,
     artifact = m.name,
-    version = m.revision
+    version = m.revision,
+    crossVersion = m.crossVersion.toString
   )
 
   def asJson(deps: Seq[Dependency]): String = deps.asJson.spaces2
